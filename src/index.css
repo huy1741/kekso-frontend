@@ -94,8 +94,8 @@ body {
   margin: 20px 10%;
 }
 #index {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: line1;
+  grid-column-end: line2;
   margin: auto;
   font-size: 30px;
   text-align: left;
@@ -172,4 +172,53 @@ body {
 
 .warnMessage {
   text-align: center;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .searchBar {
+    min-width: 200px;
+    width: 80%;
+  }
+  .itemList {
+    margin: 10px 10px;
+  }
+  .orderButton {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    min-width: 200px;
+    width: 90%;
+  }
+  .searchInput {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .searchInput input {
+    font-size: 18px;
+  }
+  .searchInput #searchIcon {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .showShipped {
+    font-size: 15px;
+  }
+
+  .itemList {
+    margin: 10px 0px;
+    font-size: 10px;
+  }
+  #index {
+    margin: auto;
+    font-size: 15px;
+  }
+  .orderButton {
+    font-size: 12px;
+    margin: auto;
+    padding: 10px;
+  }
 }
