@@ -2,7 +2,7 @@
 
 This is the frontend part of the assignment. Simple run the backend first and npm start and the front end will start.
 There should be more test to be added but since I don't have enough time simple and snapshot tests are included.
-The UI is designed responsively on website and mobile should also work too.
+The UI is designed responsively on website and mobile should also work too. Link to backend: https://github.com/huy1741/kesko-backend
 
 ## Available Scripts
 
