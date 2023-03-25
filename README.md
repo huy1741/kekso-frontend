@@ -20,4 +20,6 @@ You will also see any lint errors in the console.
 
 It will run the jest test.
 
+Below is the final product\
+![image](https://user-images.githubusercontent.com/64857328/227728186-f59b9197-5063-441d-b5ef-0930461ba8bb.png)
 
