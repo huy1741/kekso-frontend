@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  background-color: #012b37;
+}
+
+.button {
+}
+
+/*Search Bar*/
+.searchBar {
+  min-width: 500px;
+  width: 50%;
+  margin: auto;
+  padding: auto;
+}
+
+.searchBar p {
+  padding-left: 20px;
+}
+.searchInput {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 30px;
+  position: relative;
+}
+
+.searchInput input {
+  color: rgba(255, 255, 255, 0.5);
+  border: transparent;
+  background-color: transparent;
+  font-size: 30px;
+}
+.searchInput #searchIcon {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.showShipped {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+.showShipped input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.showShipped input:checked ~ .checkmark {
+  background-color: #b54139;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.showShipped input:checked ~ .checkmark:after {
+  display: block;
+}
+.showShipped .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*Item List*/
+.itemList {
+  display: grid;
+  grid-template-columns: [line1] 5% [line2] 20% [line3] 15% [line4] 25% [line5] 15% [end];
+  justify-content: space-evenly;
+  margin: 20px 10%;
+}
+#index {
+  grid-column-start: line1;
+  grid-column-end: line2;
+  margin: auto;
+  font-size: 30px;
+  text-align: left;
+}
+.itemList #title1 {
+  color: #b54139;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.itemList #title2 {
+  color: #b54139;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.itemList #title3 {
+  color: #b54139;
+  grid-column-start: line4;
+  grid-column-end: line5;
+}
+.orderButton {
+  grid-column-start: line5;
+  grid-column-end: end;
+  background-color: #b54139;
+  border: none;
+  color: white;
+  padding: 20px;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  margin: auto 50px;
+  cursor: pointer;
+  min-height: 25px;
+  min-width: fit-content;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Loader*/
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.warnMessage {
+  text-align: center;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .searchBar {
+    min-width: 200px;
+    width: 80%;
+  }
+  .itemList {
+    margin: 10px 10px;
+  }
+  .orderButton {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    min-width: 200px;
+    width: 90%;
+  }
+  .searchInput {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .searchInput input {
+    font-size: 18px;
+  }
+  .searchInput #searchIcon {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .showShipped {
+    font-size: 15px;
+  }
+
+  .itemList {
+    margin: 10px 0px;
+    font-size: 10px;
+  }
+  #index {
+    margin: auto;
+    font-size: 15px;
+  }
+  .orderButton {
+    font-size: 12px;
+    margin: auto;
+    padding: 10px;
+  }
+}
